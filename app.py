@@ -53,7 +53,7 @@ def login():
             error = 'Tidak boleh. Mohon coba lagi'
         else:
             return redirect(url_for('sign_up_log_in'))
-    return render_template('login.html', error = error)
+    return render_template('index.html', error = error)
                 
 @app.route('/save', methods=['POST'])
 def save_image():
