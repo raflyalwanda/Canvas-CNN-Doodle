@@ -1,0 +1,164 @@
+.absolute {
+	position: absolute;
+}
+
+.lower {    
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upper {
+	border:solid 1px #000000;
+	padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+	color: #FFFFFF;
+	font-size: .9em;
+	font-weight: 300;
+}
+
+#cursors{
+	position:relative;
+}
+
+input[type="range"] {
+    height: 22px;
+}
+
+body {
+	font-family:Arial,Helvetica,sans-serif;
+	background-color: #343840;
+	line-height: 1;
+	overflow: hidden;
+}
+
+.btn-default{
+	float:right;
+}
+
+input[type="submit"]:disabled{
+    opacity:.2;
+}
+
+/* PLUGIN - Mini-Sphere Copyright (c) 2010-2015 Michael Deal. All rights reserved. */
+
+/* Creates borders for the Color Picker Window */
+.botLine { BORDER-TOP: 1px solid #EEE; WIDTH: 370px; MARGIN-TOP: 9px; PADDING-TOP: 9px; COLOR: #999; }
+.botLine a { COLOR: #e04f92; }
+.botLine a:hover { COLOR: #F360BB; }
+
+
+.ui-button-text-only .ui-button-text {
+	 padding: .4em .2em;
+	 font-size: .8em;
+}
+.ui-buttonset .ui-button {
+    width: 65px;
+    height: 28px;
+}
+
+#plugID{ 
+	border: 5px solid #111;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+#colorBox {
+	color: #999;
+	cursor: move;
+	font-family: arial, helvetica, san-serif; 
+	font-size: 11px; 
+	position: absolute;
+	left: 135px;
+	height: 132px; 
+	width: 131px;
+
+}
+
+#colorBox .ui-resizable-se {
+  bottom: -15px;
+}
+
+#colorTitle{ 
+	background: #111;
+	border: 3px solid #111;
+	border-bottom: 3px solid #171717;
+	border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+#toolbar {
+	color: #999;
+	cursor: move;
+	position: absolute;
+	left: 268px;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    background: -webkit-linear-gradient(left, #256994, #47A3FF); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, #256994, #47A3FF); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, #256994, #47A3FF); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(left, #256994, #47A3FF);
+	border: 1px solid #4BB7FA;
+    width: 240px;
+    height: 7px;
+}
+
+#sliders { 
+    background: -webkit-linear-gradient(#444444, #000000); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#444444, #000000); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#444444, #000000); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#444444, #000000);
+	color: #999;
+	cursor: move;
+	position: absolute; 
+	width: 322px;
+	height: 119px;
+	border: 1px solid #555;
+    border-radius: 6px;
+    left: 268px;
+    top: 30px;
+  }
+
+#sliderbox {
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-top: 15px; 
+  	width: 240px;
+}
+
+#mini { 
+	color: #999;
+	cursor: move;
+	font-family: arial, helvetica, san-serif; 
+	font-size: 11px; 
+	position: absolute; 
+	background: #000; 
+	padding-bottom: 8px; 
+	border: 1px solid #111;
+	border-radius: 6px;
+	height: 139px; 
+	width: 131px; 
+	z-index: 100;
+	 box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+  	-moz-box-sizing: content-box; 
+  }
+
+#mini div { margin: 0; padding: 0; }
+#mini .north { background: #111; border-bottom: 1px solid #171717; }
+#mini .north div { color: #999; float: right; padding: 5px 7px; CURSOR: pointer; -moz-user-select: none; -khtml-user-select: none; user-select: none; }
+#mini .north div:hover { COLOR: #DE83AD; }
+#mini .south { margin: 32px 0 0 10px; cursor: crosshair; -moz-user-select: none; -khtml-user-select: none; user-select: none; }
+#mini .south div { background: url('../img/miniCurr.gif') no-repeat; position: absolute; height: 9px; width: 9px; z-index: 101; }
+#mini .south img { height: 100%; WIDTH: 100%; position: relative; TOP: -8px; LEFT: -1px; }
+#mini #mHEX { padding: 5px 0 4px 7px; cursor: text; float: left; }
+#mini #mHEX:hover { color: #DE83AD }
+#mini #mSize { float: right; top: -14px; left: 7px; height: 14px; width: 14px; cursor: se-resize }

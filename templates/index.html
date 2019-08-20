@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Drawing App</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="static/css/jquery-ui.structure.css">
+        <link rel="stylesheet" href="static/css/jquery-ui.theme.css">
+        <link rel="stylesheet" href="static/css/jquery-ui.css">
+        <link rel="stylesheet" href="static/css/styles.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+        <script src="static/js/jquery-ui.js"></script>
+        <script src="static/js/script.js"></script>
+        <script>
+        $(function() {
+            $("#colorBox").draggable();
+         });
+
+        $(function() {
+            $("#sliders").draggable();
+         });
+
+        $(function() {
+            $("#colorBox").resizable(function() {
+                $(this).children('.colorPrev').css({
+                    height: $(this).height()
+                });
+            });
+        });
+
+         $(function() {
+            $("#sliders" ).resizable({
+              maxHeight: 119,
+              maxWidth: 323,
+              minHeight: 110,
+              minWidth: 249
+            });
+          });
+
+        $(function() {
+            $("#sliders").resizable(function() {
+                $(this).children('#sliderbox').css({
+                    height: $(this).height()
+                });
+            });
+        });
+
+        $(function() {
+            $("#buttons").buttonset();
+        });
+        </script>
+
+    </head>
+    <body>
+        <canvas id="lower" width="800" height="600" class="lower absolute"></canvas>
+        <canvas id="upper" width="800" height="600" class="upper absolute"></canvas>
+        <div id="brushes"></div>
+
+        <!-- <div id="mini" onmousedown="Picker.core('mini',event)">
+            <div class="north">
+                <span id="mHEX">FFFFFF</span>
+                <div onmousedown="\_S('mini').display='none';">X</div>
+            </div>
+            <div class="south" id="mSpec" style="HEIGHT: 110px; WIDTH: 110px;" onmousedown="Picker.core('mCur',event)">
+                <div id="mCur" style="TOP: 76px; LEFT: 58px;"></div>
+                <img src="static/img/circle.png" onmousedown="return false;" ondrag="return false;" onselectstart="return false;">
+                <img src="static/img/resize.gif" id="mSize" onmousedown="Picker.core('mSize',event); return false;" ondrag="return false;" onselectstart="return false;">
+            </div>
+        </div> -->
+        <div id="toolbar">
+            <form>
+                <div id="buttons">
+                    <input type="radio" id="draw" name="tool" checked="checked"><label for="draw">Pencil</label>
+                    <input type="radio" id="eraser" name="tool"><label for="eraser">Erase</label>
+                    <input type="radio" id="save" name="tool" ><label for="save">Save</label>
+                    <input type="radio" id="load" name="tool" disabled><label for="load">Load</label>
+                    <input type="radio" id="reset" name="tool"><label for="reset">Reset</label>
+                </div>
+            </form>
+        </div>
+        <!-- <div id="colorBox">
+            <div id="colorTitle" class="colorPrev">
+                <span class="colorPrev">Color Preview</span>
+            </div>
+            <div id="plugID" class="colorPrev" style="vertical-align:top; HEIGHT: 100%; WIDTH: 100%; COLOR: #000; BACKGROUND: #333;"></div>
+        </div> -->
+        <div id="sliders">
+            <div id="sliderbox">
+                <label for="brushSize">Brush Size</label>
+                <input type="range" min="1" max="30" value="15" id="brush_size"><br>
+                <label for="opacity">Opacity</label>
+                <input type="range" min="0.0" max="1.0" step=".01" value="1.0" id="opacity">
+            </div>
+        </div>
+    </body>
+</html>
