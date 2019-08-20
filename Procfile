@@ -1,1 +1,1 @@
-web: python createdDB.py
+web: python app.py
