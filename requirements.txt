@@ -1,3 +1,4 @@
+Python==3.7
 Flask==0.10.1
 Flask-SocketIO==0.5.0
 gevent==1.0.1
